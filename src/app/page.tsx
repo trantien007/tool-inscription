@@ -75,19 +75,19 @@ export default function Home() {
 
   const run = useCallback(() => {
     if (accounts.length === 0) {
-      setLogs((logs) => [handleLog("没有私钥", "error"), ...logs]);
+      setLogs((logs) => [handleLog("Private key trống", "error"), ...logs]);
       setRunning(false);
       return;
     }
 
     if (!toAddress) {
-      setLogs((logs) => [handleLog("没有地址", "error"), ...logs]);
+      setLogs((logs) => [handleLog("Không có địa chỉ", "error"), ...logs]);
       setRunning(false);
       return;
     }
 
     if (!inscription) {
-      setLogs((logs) => [handleLog("没有铭文", "error"), ...logs]);
+      setLogs((logs) => [handleLog("không có dòng chữ", "error"), ...logs]);
       setRunning(false);
       return;
     }

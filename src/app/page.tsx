@@ -126,31 +126,13 @@ export default function Home() {
       <h1 className=" text-5xl">Inscription - DRC-20 GROUP</h1>
 
       <div className=" flex items-center gap-2">
-        <span>代码开源:</span>
+        <span>Tham gia nhóm:</span>
         <Link
           className=" text-blue-500 hover:underline"
-          href="https://github.com/vectorisvector/inscription"
+          href="https://t.me/drc20vn"
           target="_blank"
         >
-          Alpha Script
-        </Link>
-
-        <span>dev:</span>
-        <Link
-          className=" text-blue-500 hover:underline"
-          href="https://twitter.com/cybervector_"
-          target="_blank"
-        >
-          @cybervector_
-        </Link>
-
-        <span>alpha:</span>
-        <Link
-          className=" text-blue-500 hover:underline"
-          href="https://twitter.com/ChaunceyCrypto"
-          target="_blank"
-        >
-          @ChaunceyCrypto
+          DRC-20 Viet Nam
         </Link>
       </div>
 

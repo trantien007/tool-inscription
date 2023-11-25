@@ -123,7 +123,7 @@ export default function Home() {
 
   return (
     <main className=" flex flex-col items-center gap-5 py-5">
-      <h1 className=" text-5xl">Inscription</h1>
+      <h1 className=" text-5xl">Inscription - DRC-20 GROUP</h1>
 
       <div className=" flex items-center gap-2">
         <span>代码开源:</span>
@@ -155,7 +155,7 @@ export default function Home() {
       </div>
 
       <div className=" flex items-center justify-center gap-5">
-        <span>链（选你要打铭文的链，别选错了）:</span>
+        <span>Chain (Chọn chain muốn khắc chữ, KHÔNG CHỌN SAI):</span>
         <select
           className=" h-10 w-[200px] rounded-lg border px-2"
           disabled={running}
@@ -176,10 +176,10 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>私钥（必填，每行一个）:</span>
+        <span>Khóa riêng (bắt buộc, một khóa trên mỗi dòng):</span>
         <textarea
           className=" h-[100px] w-[800px] rounded-lg border p-2"
-          placeholder="私钥，不要带 0x，程序会自动处理"
+          placeholder="Khóa riêng (Không có 0x ở đầu)"
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -196,10 +196,10 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>转给谁的地址（必填）:</span>
+        <span>Địa chỉ nhận token (bắt buộc):</span>
         <input
           className=" h-10 w-[800px] rounded-lg border px-2"
-          placeholder="地址"
+          placeholder="Địa chỉ nhận token"
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -209,7 +209,7 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>rpc（可选，默认公共，http，最好用自己的）:</span>
+        <span>RPC (tùy chọn, công khai mặc định, http, tốt nhất nên sử dụng cái của riêng bạn):</span>
         <input
           className=" h-10 w-[800px] rounded-lg border px-2"
           placeholder="rpc"
@@ -222,10 +222,10 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>要打的铭文（原始铭文，不是转码后的十六进制）:</span>
+        <span>Dòng chữ cần gõ (chữ gốc, không phải dạng hex được chuyển mã):</span>
         <textarea
           className=" h-[100px] w-[800px] rounded-lg border p-2"
-          placeholder={`铭文，不要输入错了，自己多检查下，例子：\n${example}`}
+          placeholder={`Đừng nhập sai dòng chữ, hãy tự kiểm tra. Ví dụ：\n${example}`}
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -250,12 +250,12 @@ export default function Home() {
             }
           }}
         >
-          {running ? "运行中" : "运行"}
+          {running ? "Đang chạy" : "Chạy"}
         </button>
 
         <input
           className=" h-10 w-[400px] rounded-lg border px-2"
-          placeholder="间隔时间（默认 1000ms）"
+          placeholder="khoảng thời gian (mặc định 1000ms）"
           type="number"
           disabled={running}
           onChange={(e) => {
@@ -266,7 +266,7 @@ export default function Home() {
       </div>
 
       <div className=" mt-5 flex w-[1000px] flex-col gap-2">
-        <span>{`日志（计数 = ${
+        <span>{`nhật ký (đếm = ${
           logs.filter((log) => log.includes("✅")).length
         }）:`}</span>
         <div className=" flex h-[600px] flex-col gap-1 overflow-auto rounded-lg bg-gray-100 px-4 py-2">
